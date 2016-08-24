@@ -1,0 +1,24 @@
+{
+  "name": "cubemail",
+  "version": "1.0.0",
+  "description": "Cube mailout template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidBiddle/cubemail.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidBiddle/cubemail/issues"
+  },
+  "homepage": "https://github.com/DavidBiddle/cubemail#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-email-builder": "^3.0.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
