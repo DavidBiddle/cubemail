@@ -3,3 +3,25 @@ body {
     color: #000000;
     font-family: monospace;
 }
+
+.wrapper {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: monospace;
+    width: 600px;
+    margin:auto;
+}
+
+.title{
+	font-size:32px;
+	font-weight: bold;
+}
+
+.event__spacer{
+	width: 20px;
+}
+
+.event__title{
+	font-size: 28px;
+	font-weight: bold;
+}
