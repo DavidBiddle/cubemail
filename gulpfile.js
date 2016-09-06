@@ -1,6 +1,8 @@
 var gulp = require('gulp');
 var EmailBuilder = require('gulp-email-builder');
 var sass = require('gulp-sass');
+var removeHtmlComments = require('gulp-remove-html-comments');
+
 
 var options = {
     encodeSpecialChars: true,
@@ -34,6 +36,7 @@ gulp.task('build', function() {
 gulp.task('inline',['sass'], function() {
     return gulp.src(['./src/*.html'])
         .pipe(builder.inlineCss())
+        .pipe(removeHtmlComments())
         .pipe(gulp.dest('./dist/'));
 });
 
