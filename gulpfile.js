@@ -24,14 +24,14 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('./src/'))
 });
 
-gulp.task('emailBuilder', function() {
+gulp.task('build', function() {
     return gulp.src(['./src/*.html'])
         .pipe(builder.inlineCss())
         .pipe(builder.sendEmailTest())
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('inline', function() {
+gulp.task('inline',['sass'], function() {
     return gulp.src(['./src/*.html'])
         .pipe(builder.inlineCss())
         .pipe(gulp.dest('./dist/'));
@@ -41,7 +41,8 @@ gulp.task('inline', function() {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
   gulp.watch('./src/*.scss', ['sass','inline']);
+  gulp.watch('./src/*.html', ['inline']);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'emailBuilder']);
+gulp.task('default', ['watch']);
